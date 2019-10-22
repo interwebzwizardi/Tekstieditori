@@ -76,7 +76,7 @@ public class tekstieditoriGUI extends JFrame {
 			}
 		});
 		mntmAvaa.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
-		mntmAvaa.setIcon(new ImageIcon(tekstieditoriGUI.class.getResource("/com/sun/java/swing/plaf/windows/icons/Directory.gif")));
+		mntmAvaa.setIcon(new ImageIcon(tekstieditoriGUI.class.getResource("/load_Icon.png")));
 		mnTiedosto.add(mntmAvaa);
 		
 		mntmTallenna = new JMenuItem("Tallenna");
@@ -85,7 +85,7 @@ public class tekstieditoriGUI extends JFrame {
 				metodeja.tallennaTiedosto();
 			}
 		});
-		mntmTallenna.setIcon(new ImageIcon(tekstieditoriGUI.class.getResource("/javax/swing/plaf/metal/icons/ocean/floppy.gif")));
+		mntmTallenna.setIcon(new ImageIcon(tekstieditoriGUI.class.getResource("/save_Icon.png")));
 		mntmTallenna.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
 		mnTiedosto.add(mntmTallenna);
 		
@@ -114,6 +114,7 @@ public class tekstieditoriGUI extends JFrame {
 				metodeja.korvaaSana();
 			}
 		});
+		mntmKorvaa.setIcon(new ImageIcon(tekstieditoriGUI.class.getResource("/replace_Icon.png")));
 		mnMuokkaa.add(mntmKorvaa);
 		
 		mnTietoja = new JMenu("Tietoja");
@@ -141,7 +142,7 @@ public class tekstieditoriGUI extends JFrame {
 				metodeja.lataaTiedosto();
 			}
 		});
-		btnNewButton.setIcon(new ImageIcon(tekstieditoriGUI.class.getResource("/javax/swing/plaf/metal/icons/ocean/file.gif")));
+		btnNewButton.setIcon(new ImageIcon(tekstieditoriGUI.class.getResource("/load_Icon.png")));
 		toolBar.add(btnNewButton);
 		
 		btnNewButton_1 = new JButton();
@@ -150,7 +151,7 @@ public class tekstieditoriGUI extends JFrame {
 				metodeja.tallennaTiedosto();
 			}
 		});
-		btnNewButton_1.setIcon(new ImageIcon(tekstieditoriGUI.class.getResource("/javax/swing/plaf/metal/icons/ocean/floppy.gif")));
+		btnNewButton_1.setIcon(new ImageIcon(tekstieditoriGUI.class.getResource("/save_Icon.png")));
 		toolBar.add(btnNewButton_1);
 		
 		btnNewButton_2 = new JButton();
@@ -159,7 +160,7 @@ public class tekstieditoriGUI extends JFrame {
 				metodeja.korvaaSana();
 			}
 			});
-		btnNewButton_2.setIcon(new ImageIcon(tekstieditoriGUI.class.getResource("/com/sun/javafx/scene/web/skin/Cut_16x16_JFX.png")));
+		btnNewButton_2.setIcon(new ImageIcon(tekstieditoriGUI.class.getResource("/replace_Icon.png")));
 		toolBar.add(btnNewButton_2);
 		
 		editorPane = new JEditorPane();

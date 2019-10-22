@@ -77,6 +77,12 @@ public class metodeja {
 
 		try {
 			String hakusana = JOptionPane.showInputDialog("Aseta haettava sana:");
+			
+			//Muutetaan sisältö pieneksi jotta löydetään kaikki hakusanaa vastaavat tulokset tiedostosta
+			String sisältöNormaalina = tekstieditoriGUI.editorPane.getText();
+			String sisältöPieneksi = sisältöNormaalina.toLowerCase();
+			tekstieditoriGUI.editorPane.setText(sisältöPieneksi);
+			
 			Document sisältö = tekstieditoriGUI.editorPane.getDocument();
 			
 			for (int index = 0; index + hakusana.length() < sisältö.getLength(); index++) {
@@ -117,6 +123,7 @@ public class metodeja {
 			String hakusana = hakusanaField.getText();
 			String korvaava = korvaavaField.getText();
 			String sisältö = tekstieditoriGUI.editorPane.getText();
+			sisältö = sisältö.toLowerCase();
 			
 			for (int index = 0; index + hakusana.length() < sisältö.length(); index++) {
 				String osuma = tekstieditoriGUI.editorPane.getText(index, hakusana.length());
